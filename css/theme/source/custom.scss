@@ -1,0 +1,92 @@
+/**
+ * White theme for reveal.js. This is the opposite of the 'black' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+// Default mixins and settings -----------------
+@import '../template/mixins';
+@import '../template/settings';
+// ---------------------------------------------
+
+// Include theme-specific fonts
+// @import url(./fonts/Inter/inter.css);
+// https://fonts.google.com/specimen/Inter
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+// Override theme settings (see ../template/settings.scss)
+.slides {
+  background: white;
+  box-shadow: 0 0 3px 0px rgb(0 0 0 / 30%);
+  border-radius: 5px;
+  // border-top: 5px solid #ff6600;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  overflow: hidden!important;
+  position: relative;
+  .slide-footer {
+    position: absolute;
+    bottom: 0;
+    font-size: 0.6em;
+    height: 60px; // border pushes it down for some reason.
+    padding: 0 40px;
+    width: calc(100% - 80px);
+    background: #fafafa;
+    border-top: #f6f7f8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #697386;
+    font-weight: bold;
+    .website {
+      float: left;
+    }
+    .twitter {
+      float: right;
+      display: flex;
+      align-items: center;
+      i {
+        margin-top: 4px;
+        margin-right: 4px;
+      }
+    }
+  }
+}
+.no-bg {
+  background-color: none;
+  color: white;
+  .slide-footer {
+    display: none;
+  }
+}
+$backgroundColor: linear-gradient(45deg, #d31f4d, #fab41e); //#faf4e9;
+
+$mainColor: #3c4257;
+$headingColor: #3c4257;
+
+$mainFontSize: 52px;
+$mainFont: 'Inter', 'Source Sans Pro', Helvetica, sans-serif;
+$headingFont: 'Inter', 'Source Sans Pro', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 800;
+$linkColor: #2a76dd;
+$linkColorHover: lighten($linkColor, 15%);
+$selectionBackgroundColor: lighten($linkColor, 25%);
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1em;
+h5 {
+  font-size: 1.4em;
+  font-weight: 200!important;
+  // text-transform: none!important
+}
+
+// Change text colors against dark slide backgrounds
+@include dark-bg-text-color(#fff);
+
+// Theme template ------------------------------
+@import '../template/theme';
+// ---------------------------------------------

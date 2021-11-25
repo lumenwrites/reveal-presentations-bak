@@ -10,8 +10,10 @@
   "scripts": {
     "test": "gulp test",
     "start": "gulp serve",
+    "present": "/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome  --new-window --app=\"data:text/html,<html><body><script>window.moveTo(-4,0);window.resizeTo(1290,580);window.location='http://localhost:8000';</script></body></html>\"",
     "printSlides": "decktape reveal --size 1920x1080  --screenshots --screenshots-directory ./screenshots --chrome-path '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' http://localhost:8000/ out.pdf",
-    "build": "gulp build"
+    "build": "gulp build",
+    "dev:themes": "npm run build -- css-themes"
   },
   "author": {
     "name": "Hakim El Hattab",

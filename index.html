@@ -3,34 +3,49 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-
     <title>reveal.js</title>
-
     <link rel="stylesheet" href="dist/reset.css" />
     <link rel="stylesheet" href="dist/reveal.css" />
-    <link rel="stylesheet" href="dist/theme/black.css" />
-		<link rel="stylesheet" href="custom.css" />
-
+    <link rel="stylesheet" href="dist/theme/custom.css" />
+    <link rel="stylesheet" href="dist/font-awesome/css/font-awesome.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- Theme used for syntax highlighted code -->
     <link rel="stylesheet" href="plugin/highlight/monokai.css" />
   </head>
   <body>
     <div class="reveal">
       <div class="slides">
-        <section
-          data-markdown="example.md"
-          data-separator-notes="^>>"
-          data-background="radial-gradient( #405A75, #2B3E4F)"
-        >
+        <!-- ln -s ~/Obsidian/Website/websites/lumenwrites/presentations/ -->
+        <section 
+        data-transition="slide" 
+        data-separator="^===="
+        data-markdown="/presentations/endless-ideas-ten-strategies.md" 
+        data-separator-notes="^>>">
           <!--
-						data-separator="^\r?\n---\r?\n$"
+                    data-background="#33485D"
+          url('/assets/img/bg-no-frame.png')
+          #33485D
+          radial-gradient( #405A75, #2B3E4F)s
+          data-separator="^\r?\n---\r?\n$"
           data-separator-vertical="^\n\n"
           data-separator-notes="^Note:"
           data-charset="iso-8859-15"
-        Note that Windows uses `\r\n` instead of `\n` as its linefeed character.
-        For a regex that supports all operating systems, use `\r?\n` instead of `\n`.
-    -->
-        </section>
+          Note that Windows uses `\r\n` instead of `\n` as its linefeed character.
+          For a regex that supports all operating systems, use `\r?\n` instead of `\n`.
+        --></section>
+        <div class="slide-footer">
+          <div class="website">https://lumenwrites.io</div>
+          <div class="twitter">
+            <i class="fab fa-twitter"></i> 
+            <div class="handle">@lumenwrites</div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -44,6 +59,10 @@
       // - https://revealjs.com/config/
       Reveal.initialize({
         hash: true,
+        // Removes the weird darkening of the screen
+        // backgroundTransition: 'none',
+        // backgroundTransition: 'slide',
+        showNotes: true,
         // The "normal" size of the presentation, aspect ratio will
         // be preserved when the presentation is scaled to fit different
         // resolutions. Can be specified using percentage units.
